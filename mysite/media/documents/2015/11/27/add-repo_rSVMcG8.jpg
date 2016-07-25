@@ -1,0 +1,12 @@
+1.   export http_proxy=http://username:password@202.141.80.22:3128/
+      export https_proxy=https://username:password@202.141.80.22:3128/
+
+2.   sudo -E add-apt-repository ppa:(repository-name)
+    
+     eg-   sudo -E add-apt-repository ppa:sgringwe/rdio
+
+3.  sudo apt-get update
+
+4.  sudo apt-get install (repository-name)
+
+    eg-   sudo apt-get install rdio

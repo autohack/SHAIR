@@ -1,0 +1,11 @@
+<h1>{{title }}</h1>
+
+{{user}}
+{{request.user}}
+
+<form method='POST' action='/abc/'>(% csrf_token %)
+{{ form.as_p }}
+
+<input type='submit' value='Sign Up' />
+
+</form>

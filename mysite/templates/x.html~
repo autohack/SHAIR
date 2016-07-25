@@ -1,0 +1,16 @@
+
+<html>
+<head>
+	<style> 
+			.body {
+          background-image: url("background.png");
+          background-repeat: no-repeat;
+          background-size: 1370px 690px;
+      }
+	</style>
+</head>
+
+<body>
+<img src="background.png">
+</body>
+</html>

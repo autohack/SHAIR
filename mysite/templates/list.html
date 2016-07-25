@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+    <style>
+    p {
+    	color: #33CCCC;
+    	text-align: center;
+    	line-height: 10px;
+    	vertical-align: text-middle;
+	}
+      .inputuser[type=text]{
+        position: absolute;
+        top: 45px;
+        left: 653px;
+        height: 30px;
+        width: 250px;
+        margin-bottom: 10px;
+        color: #33CCCC;
+      }
+      .inputpass[type=password] {
+        position: absolute;
+        top: 45px;
+        left: 946px;
+        height: 30px;
+          width: 250px;
+          margin-bottom: 10px;
+          color: #33CCCC;
+      }
+    body {
+        background-image: url("{% static 'assets/admin/img/background.png' %}");
+        background-repeat: no-repeat;
+        background-size: 1370px 690px;
+    }
+      .logout{
+        position: absolute;
+        top: 300px;
+        left: 550px;
+        font-style: loto;
+        color: #33CCCC;
+        font-size:32px;
+      }
+      {% load staticfiles %}
+      
+      .buttonlog {
+        position: absolute;
+        top: 42px;
+        left: 1230px;
+        display: inline-block;
+          padding: 10px 20px;
+          font-size: 12px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #33CCCC;
+        border: solid;
+        border-color: #fff;
+        border-radius: 25px;
+      }
+      .buttonw {
+        position: absolute;
+        top: 240px;
+        left: 1050px;
+        display: inline-block;
+        padding: 10px 90px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #fff;
+        border: none;
+        border-radius: 15px;
+      }
+      .buttonsign {
+        position: absolute;
+        top: 530px;
+        right: 240px;
+        display: inline-block;
+          padding: 12px 30px;
+          font-size: 16px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #33CCCC;
+        border: none;
+        border-radius: 15px;
+      }
+      .buttoncan {
+        position: absolute;
+        top: 530px;
+        right: 80px;
+        display: inline-block;
+          padding: 12px 30px;
+          font-size: 14px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #33CCCC;
+        background-color: #fff;
+        border: solid;
+        border-color: #33CCCC;
+        border-radius: 15px;
+      }
+      .buttoncan:hover {
+        color: #fff;
+        background-color: #33CCCC
+      }
+      .inputname[type=text] {
+        position: absolute;
+        top: 300px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputreguser[type=text] {
+        position: absolute;
+        top: 357px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputregpass[type=text] {
+        position: absolute;
+        top: 414px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputmail[type=text] {
+        position: absolute;
+        top: 471px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .buttonup {
+        display: inline-block;
+          padding: 15px 50px;
+          font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #33CCCC;
+        background-color: #fff;
+        border: dashed;
+        border-radius: 50px;
+      }
+      .button1 {
+          display: inline-block;
+          padding: 15px 25px;
+          font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      .list{
+        position: absolute;
+        top: 300px;
+        left: 550px;
+        font-style: loto;
+        color: #33CCCC;
+        font-size:24px;
+      }
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    {% block title %}
+    <title>Navbar Template for Bootstrap</title>
+    {% endblock %}
+
+  </head>
+
+
+
+  	<body>
+		<!-- List of uploaded documents -->
+		{% if documents %}
+			<ul>
+			<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+			<p size=20 > Uploaded files</p>
+			<br>
+			{% for document in documents %}
+			{% if document.user_name == username %}
+			{% if document.is_deleted == 0 %}
+				<p><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</p>
+				<p> Share link: 127.0.0.1:8080{{document.docfile.url}}<a href = {{document.docfile.url}}><img border="0" alt="" src="{% static 'assets/admin/img/down.jpeg' %}" width="30" height="30"></a>
+				<a href = "/delete/{{document.id}}/"><img border="0" alt="W3Schools" src="{% static 'assets/admin/img/delete.jpg' %}" width="30" height="30"></a></p><br>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No documents.</p>
+		{% endif %}
+
+		<!-- Upload form. Note enctype attribute! -->
+		<form action="{% url "list" %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p>{{ form.non_field_errors }}</p>
+			<p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+			<p>{{ form.docfile.errors }} {{ form.docfile }}</p>
+			<p><input class = "buttonup" type="submit" value="Upload" /></p>
+		</form>
+		<input class="buttonw" type = "submit" value="" >
+		
+		<!-- <!button class="buttonlog" onclick="#" > <a href="/accounts/login/" > Log In </a></button> -->
+		{% if username == 'PUBLIC' %}
+		<form action="/accounts/login/">
+			<input class="buttonlog" type="submit" value="LogIn">
+		</form>
+		{% else %}
+		<form action="/accounts/logout/">
+			<input class="buttonlog" type="submit" value="LogOut">
+		</form>
+		{% endif %}
+
+	</body>
+
+ 
+</html>
+

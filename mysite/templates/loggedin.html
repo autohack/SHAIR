@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form action="/accounts/logout/">
+		<input class="buttonlog" type="submit" value="LogOut">
+	</form>
+	<p class = "logout"> Hi {{full_name}} Welcome</p>
+	<form action="/file_upload/">
+		<input class="buttonup" type="submit" value="Click here to Upload">
+	</form>
+
+{% endblock %}

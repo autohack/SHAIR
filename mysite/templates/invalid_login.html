@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<p class = "logout" >Invalid Username and Password</p>
+	<form action="/accounts/login">
+		<input class="buttonup" type="submit" value="Try Again">
+	</form>
+	<!-- <p>Click <a href="/accounts/logout/"> here</a> to logout. </p> -->
+
+{% endblock %}

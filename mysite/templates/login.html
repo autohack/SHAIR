@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+	<p class="errors">Sorry, that is an invalid entry</p>
+
+{% endif %}
+
+<form action = "/accounts/auth/" method="post">{% csrf_token %}
+	<input class="inputuser" type = "text" name="username" value="Username" id="username">
+	<input class="inputpass" type="password" name="password" value = "Pass" id="password">
+	<input class="buttonlog" type="submit" value ="LogIn" />
+
+</form>
+
+<form action="/accounts/register/">
+		<input class="buttonsign" type="submit" value="Register">
+</form>
+<form action="/file_upload">
+		<input class="buttonup" type="submit" value="Click here to Upload">
+</form>
+
+{% endblock %}
+</html>

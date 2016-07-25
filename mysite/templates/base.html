@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+    <style>
+      .inputuser[type=text]{
+        position: absolute;
+        top: 45px;
+        left: 653px;
+        height: 30px;
+        width: 250px;
+        margin-bottom: 10px;
+        color: #33CCCC;
+      }
+      .inputpass[type=password] {
+        position: absolute;
+        top: 45px;
+        left: 946px;
+        height: 30px;
+          width: 250px;
+          margin-bottom: 10px;
+          color: #33CCCC;
+      }
+      .logout{
+        position: absolute;
+        top: 240px;
+        left: 550px;
+        font-style: loto;
+        color: #33CCCC;
+        font-size:32px;
+      }
+      .logx{
+        position: absolute;
+        top: 290px;
+        left: 580px;
+        font-style: loto;
+        color: #33CCCC;
+        font-size:32px;
+      }
+      {% load staticfiles %}
+      body {
+          background-image: url("{% static 'assets/admin/img/background.png' %}");
+          background-repeat: no-repeat;
+          background-size: 1370px 690px;
+      }
+      .buttonlog {
+        position: absolute;
+        top: 42px;
+        left: 1230px;
+        display: inline-block;
+          padding: 10px 20px;
+          font-size: 12px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #33CCCC;
+        border: solid;
+        border-color: #fff;
+        border-radius: 25px;
+      }
+      .buttonsign {
+        position: absolute;
+        top: 240px;
+        left: 1050px;
+        display: inline-block;
+        padding: 10px 90px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #33CCCC;
+        border: none;
+        border-radius: 15px;
+      }
+      .buttoncan {
+        position: absolute;
+        top: 530px;
+        right: 80px;
+        display: inline-block;
+          padding: 12px 30px;
+          font-size: 14px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #33CCCC;
+        background-color: #fff;
+        border: solid;
+        border-color: #33CCCC;
+        border-radius: 15px;
+      }
+      .buttoncan:hover {
+        color: #fff;
+        background-color: #33CCCC
+      }
+      .inputname[type=text] {
+        position: absolute;
+        top: 300px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputreguser[type=text] {
+        position: absolute;
+        top: 357px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputregpass[type=text] {
+        position: absolute;
+        top: 414px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .inputmail[type=text] {
+        position: absolute;
+        top: 471px;
+        left: 970px;
+        height: 33px;
+          width: 340px;
+          font-size: 20px;
+          color: #33CCCC;
+          border: solid;
+        border-color: #33CCCC;
+        border-radius: 30px;
+      }
+      .buttonup {
+        display: inline-block;
+        position: absolute;
+        top: 350px;
+        left: 550px;
+        padding: 15px 50px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #33CCCC;
+        background-color: #fff;
+        border: dashed;
+        border-radius: 50px;
+      }
+      .buttonw {
+        position: absolute;
+        top: 240px;
+        left: 1050px;
+        display: inline-block;
+        padding: 10px 90px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #fff;
+        border: none;
+        border-radius: 15px;
+      }
+      .list{
+        position: absolute;
+        top: 300px;
+        left: 550px;
+        font-style: loto;
+        color: #33CCCC;
+        font-size:24px;
+      }
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    {% block title %}
+    <title>SHAIR</title>
+    {% endblock %}
+
+  </head>
+
+  <body>
+  <input class="buttonw" type = "submit" value="" >
+{% block content %}
+  <h2>Register </h2>
+  <form action ="/accounts/register/" method="post">{% csrf_token %}
+  {{form}}
+
+  <input class="buttonw" type = "submit" value="" >
+  </form>
+    <div>
+      <p>This is my content block</p>
+    </div>
+{% endblock %}
+
+  </body>
+</html>

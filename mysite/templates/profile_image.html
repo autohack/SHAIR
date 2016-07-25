@@ -1,0 +1,14 @@
+<html>
+
+<body>
+{% if documents %}
+			<ul>
+			{% for document in documents %}
+				<li><a href="{{ document.image.url }}">{{ document.image.name }}</a></li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No documents.</p>
+		{% endif %}
+</body>
+</html>
